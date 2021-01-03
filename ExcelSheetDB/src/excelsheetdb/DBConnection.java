@@ -1,14 +1,29 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
+
 package excelsheetdb;
 
-/**
- *
- * @author Mostafa.Net
- */
+import java.sql.Connection;
+import java.sql.DriverManager;
+import java.sql.SQLException;
+import java.sql.Statement;
+import javax.swing.JOptionPane;
+
+
 public class DBConnection {
-    
+    public static Connection con;
+   
+ public static Connection mycon(){
+     try {
+         
+         Class.forName("com.mysql.jdbc.Driver");
+         con = DriverManager.getConnection("jdbc:mysql://localhost:3325/testclient_db","root","");
+         return con;
+         
+         
+     } catch (ClassNotFoundException | SQLException e) {
+         
+         System.out.println(e);
+         return null;
+     }
+ }
+
 }
