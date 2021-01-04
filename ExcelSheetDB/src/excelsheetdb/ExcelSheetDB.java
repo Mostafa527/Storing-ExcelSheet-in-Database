@@ -1,5 +1,5 @@
 
-package exceltest;
+package excelsheetdb;
 
 import java.io.File;
 import java.io.FileFilter;
@@ -36,13 +36,9 @@ public class ExcelSheetDB {
         FileNameExtensionFilter filter=new FileNameExtensionFilter("Excel File (.xlsx)", "xlsx");
         openfilechooser.setFileFilter(filter);
         
-       
-        
+
         }
-        
-        
-        
-        
+
     }
     
-}
+
