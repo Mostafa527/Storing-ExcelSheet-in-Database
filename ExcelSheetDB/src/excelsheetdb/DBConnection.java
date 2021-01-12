@@ -15,7 +15,7 @@ public class DBConnection {
      try {
          
          Class.forName("com.mysql.jdbc.Driver");
-         con = DriverManager.getConnection("jdbc:mysql://localhost:3325/testclient_db","root","");
+         con = DriverManager.getConnection("jdbc:mysql://localhost:3325/MyClientDB","root","");
          return con;
          
          
